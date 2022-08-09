@@ -17,7 +17,7 @@ The object returned from this api works and we can proceed to the dashboard
 
 2) My express API which returns all the same objects as the firebase API(I manually tried all combinations like invalid email, invalid pass, successful auth). The only user in this database is
 	Email: test@test.com
-	Pass: Pass
+	Pass: pass
 
 >Frontend/src/jsx/components/Dashboard/Home.js
 - This is the dashboard component that is loaded, along with the header, sidebar, etc [Inside the Frontend/src/jsx/layouts/nav folder]
