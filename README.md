@@ -23,3 +23,5 @@ The object returned from this api works and we can proceed to the dashboard
 - This is the dashboard component that is loaded, along with the header, sidebar, etc [Inside the Frontend/src/jsx/layouts/nav folder]
 
 The main app renders if we use the firebase api, but does not work with the express API. Can you please check why this is happening? Thanks!
+
+I decided to make a new public repository instead of providing access to the main one as it has sub-modules that are sensitive in nature, but if you find references in this repo that is trying to look for something out of the scope, let me know. 
