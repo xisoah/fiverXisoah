@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 /// Scroll
 
@@ -12,6 +12,7 @@ import { Dropdown } from "react-bootstrap";
 import { ThemeContext } from "../../../context/ThemeContext";
 
 const Header = ({ onNote }) => {
+  const userDetails = useSelector((state) => state.auth?.auth)
   const { background, changeBackground } = useContext(ThemeContext);
   const handleThemeMode = () => {
     if (background.value === "dark") {
@@ -20,14 +21,14 @@ const Header = ({ onNote }) => {
       changeBackground({ value: "dark", label: "Dark" });
     }
   };
-// const baseURL = 'http://localhost:3001/users'
-
-// 	const [data, setdata] = React.useState(null);
+  // const baseURL = 'http://localhost:3001/users'
+  
+  // 	const [data, setdata] = React.useState(null);
 // 	React.useEffect(() => {
-// 		axios.get(baseURL).then((response) => {
-// 		  setdata(response.data[1]);
-// 		});
-// 	  }, []);
+  // 		axios.get(baseURL).then((response) => {
+    // 		  setdata(response.data[1]);
+    // 		});
+    // 	  }, []);
 	
 // 	  if (!data) return null;
   return (
@@ -96,9 +97,9 @@ const Header = ({ onNote }) => {
                   data-toggle="dropdown">
                   <img src={avatar} width={20} alt="" />
                   <div className="header-info">
-                    <span>name here</span>
+                    <span>{userDetails?.displayName || 'User'}</span>
                     {/* <span>{data.name}</span> */}
-                    <small>Basic User</small>
+                    {/* <small>Basic User</small> */}
                   </div>
                 </Dropdown.Toggle>
 

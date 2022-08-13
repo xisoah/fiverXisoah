@@ -32,16 +32,16 @@ export function login(email, password) {
     };
 
     // Uncomment the following code to enable inbuilt API
-    return axios.post(
-        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD3RPAp3nuETDn9OQimqn_YF6zdzqWITII`,
-        postData,
-    );
-
-    // Uncomment following code to enable the node API
     // return axios.post(
-    //     `${apiBase}/login`,
+    //     `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD3RPAp3nuETDn9OQimqn_YF6zdzqWITII`,
     //     postData,
     // );
+
+    // Uncomment following code to enable the node API
+    return axios.post(
+        `${apiBase}/login`,
+        postData,
+    );
 }
 
 export function formatError(errorResponse) {
